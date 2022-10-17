@@ -14,10 +14,22 @@ class SplashScreen : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        Handler().postDelayed({
+//        Handler().postDelayed({
+//            val intent = Intent(this@SplashScreen, MainActivity::class.java)
+//            startActivity(intent)
+//            finish() //Makes sure user can't back into splash
+//        },3000) //Sets a 3 second delay to splash
+
+        MoveTo2()
+    }
+
+    private fun MoveTo2(){
+        val someDelay = Thread{
+            Thread.sleep(3000)
             val intent = Intent(this@SplashScreen, MainActivity::class.java)
             startActivity(intent)
-            finish() //Makes sure user can't back into splash
-        },3000) //Sets a 3 second delay to splash
+            finish()
+        }
+        someDelay.start()
     }
 }

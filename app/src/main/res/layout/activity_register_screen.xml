@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="Registration"
         android:textColor="@color/black"
@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rFirstName"
         android:background="#30ffffff"
+        android:visibility="invisible"
         android:hint="Enter Last Name"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
@@ -55,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rLastName"
         android:background="#30ffffff"
+        android:visibility="invisible"
         android:hint="Enter Date of Birth"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
@@ -117,5 +119,5 @@
         android:text="CREATE ACCOUNT"
         android:backgroundTint="@color/yellow"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"/>
+        android:layout_margin="0dp"/>
 </RelativeLayout>

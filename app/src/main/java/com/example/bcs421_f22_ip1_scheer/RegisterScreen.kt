@@ -29,6 +29,7 @@ class RegisterScreen : AppCompatActivity() {
         etDOB = findViewById(R.id.rDOB)
         etEmail = findViewById(R.id.rEmail)
 
+
         etUserNameR = findViewById(R.id.rUserName)
         etPasswordR = findViewById(R.id.rPassword)
         btRegister = findViewById(R.id.registerbtn)

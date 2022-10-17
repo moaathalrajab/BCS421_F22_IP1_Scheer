@@ -26,13 +26,14 @@ class MainActivity : AppCompatActivity() {
         tfRegister.setOnClickListener{registerScreen()}
     }
     fun loginAttempt() { //Compares typed Username and Password to register Username and Password
-        if (etUserName.getText().toString().equals(etUserNameR.getText().toString())
-            && etPassword.getText().toString().equals(etPasswordR.getText().toString())
-        ) {
-            Toast.makeText(this@MainActivity, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this@MainActivity, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
-        }
+
+        val shardpref= getSharedPreferences("THISIS_NAME_OFTHEFILE",
+        MODE_PRIVATE)
+        var editor= shardpref.edit()
+        editor.putString("USERNAME", etUserName.text.toString())
+        editor.putString("PASSWORD", etPassword.text.toString())
+        editor.commit();
+
     }
     fun registerScreen(){ //Switches to register activity if clicked on
         val intent = Intent(this@MainActivity, RegisterScreen::class.java)
